@@ -70,9 +70,9 @@ def isVersionInRange(version, min, max) {
     def tabMin = min == null ? null : min.toString().split("\\.")
     def tabMax = max == null ? null : max.toString().split("\\.")
 
-    return isWithinRange(getMajor(tabVersion), getMajor(tabMin), getMajor(tabMax))
-            && isWithinRange(getMinor(tabVersion), getMinor(tabMin), getMinor(tabMax))
-            && isWithinRange(getPatch(tabVersion), getPatch(tabMin), getPatch(tabMax))
+    return (isWithinRange(getMajor(tabVersion), getMajor(tabMin), getMajor(tabMax)) &&
+            isWithinRange(getMinor(tabVersion), getMinor(tabMin), getMinor(tabMax)) &&
+            isWithinRange(getPatch(tabVersion), getPatch(tabMin), getPatch(tabMax)))
 }
 
 def compatibleVersion(prop, fallbackVersion, min = null, max = null) {
