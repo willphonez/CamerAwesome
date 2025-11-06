@@ -101,7 +101,7 @@ android {
     namespace 'io.apparence.camerawesome'
 
     defaultConfig {
-        minSdkVersion 24
+        minSdkVersion 21
         targetSdk = 34
     }
     lintOptions {
